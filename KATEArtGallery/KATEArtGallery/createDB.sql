@@ -1,0 +1,7 @@
+﻿CREATE TABLE Artist(
+  ArtistId INT NOT NULL,
+  Name VARCHAR(50) NOT NULL,
+  BirthYear DATE NOT NULL,
+  DeathYear DATE NOT NULL,
+  PRIMARY KEY CLUSTERED (ArtistId ASC)
+);
