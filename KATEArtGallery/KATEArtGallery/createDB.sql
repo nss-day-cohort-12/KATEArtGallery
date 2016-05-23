@@ -4,7 +4,7 @@
     [LastName]  VARCHAR (35) NULL,
     [Location]  VARCHAR (40) NULL,
     [Address]   VARCHAR (80) NULL,
-    [PhoneNumber]     VARCHAR (10) NULL,
+    [PhoneNumber] VARCHAR (10) NULL,
     [Active]    BIT          NULL,
     CONSTRAINT [PK_Agent] PRIMARY KEY CLUSTERED ([AgentId] ASC)
 );
@@ -21,6 +21,7 @@ CREATE TABLE [dbo].[Artwork] (
     [ArtworkId]           SMALLINT     IDENTITY (1000, 1) NOT NULL,
     [ArtistId]            SMALLINT     NOT NULL,
     [Title]               VARCHAR (60) NOT NULL,
+	[Category]            VARCHAR (60) NULL,
     [YearOriginalCreated] SMALLINT     NULL,
     [Medium]              VARCHAR (60) NULL,
     [Dimensions]          VARCHAR (60) NULL,
@@ -44,7 +45,6 @@ CREATE TABLE [dbo].[Customer] (
     [AgentId]    SMALLINT     NULL,
     [FirstName]  VARCHAR (25) NULL,
     [LastName]   VARCHAR (35) NULL,
-    [Location]   VARCHAR (40) NULL,
     [Address]    VARCHAR (80) NULL,
     [PhoneNumber]      VARCHAR (10) NULL,
     CONSTRAINT [PK_Customer] PRIMARY KEY CLUSTERED ([CustomerId] ASC),
