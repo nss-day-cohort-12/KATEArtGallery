@@ -72,7 +72,7 @@ CREATE TABLE [dbo].[Invoice] (
   [ShippingAddress] DATE NULL,
   [PieceSold] DECIMAL(18,0) NULL,
   [Price] DECIMAL(18,0) NULL,
- CONSTRAINT PK_Invoice PRIMARY KEY CLUSTERED (CustomerId ASC),
-CONSTRAINT FK_Invoice1 FOREIGN KEY (AgentId) REFERENCES Agent (AgentId)
+  CONSTRAINT PK_Invoice PRIMARY KEY CLUSTERED (CustomerId ASC),
+  CONSTRAINT FK_Invoice1 FOREIGN KEY (AgentId) REFERENCES Agent (AgentId)
 
 );
