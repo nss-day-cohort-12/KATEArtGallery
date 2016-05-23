@@ -124,9 +124,9 @@ SET IDENTITY_INSERT [dbo].[Artist] OFF
 --Agent Table Data
 SET IDENTITY_INSERT [dbo].[Agent] ON
 INSERT INTO [dbo].[Agent] ([AgentId], [FirstName], [LastName], [Location], [Address], [PhoneNumber], [Active]) VALUES (1, N'Penguin', NULL, NULL, NULL, NULL, NULL)
-INSERT INTO [dbo].[Agent] ([AgentId], [FirstName], [LastName], [Location], [Address], [PhoneNumber], [Active]) VALUES (2, N'The                                               ', N'Joker                                             ', NULL, NULL, NULL, NULL)
+INSERT INTO [dbo].[Agent] ([AgentId], [FirstName], [LastName], [Location], [Address], [PhoneNumber], [Active]) VALUES (2, N'The', N'Joker', NULL, NULL, NULL, NULL)
 INSERT INTO [dbo].[Agent] ([AgentId], [FirstName], [LastName], [Location], [Address], [PhoneNumber], [Active]) VALUES (3, N'Batroc', NULL, NULL, NULL, NULL, NULL)
-INSERT INTO [dbo].[Agent] ([AgentId], [FirstName], [LastName], [Location], [Address], [PhoneNumber], [Active]) VALUES (4, N'Golden                                            ', N'Eagle                                             ', NULL, NULL, NULL, NULL)
+INSERT INTO [dbo].[Agent] ([AgentId], [FirstName], [LastName], [Location], [Address], [PhoneNumber], [Active]) VALUES (4, N'Golden', N'Eagle', NULL, NULL, NULL, NULL)
 INSERT INTO [dbo].[Agent] ([AgentId], [FirstName], [LastName], [Location], [Address], [PhoneNumber], [Active]) VALUES (5, N'Sinestro', NULL, NULL, NULL, NULL, NULL)
 INSERT INTO [dbo].[Agent] ([AgentId], [FirstName], [LastName], [Location], [Address], [PhoneNumber], [Active]) VALUES (6, N'Sandman', NULL, NULL, NULL, NULL, NULL)
 INSERT INTO [dbo].[Agent] ([AgentId], [FirstName], [LastName], [Location], [Address], [PhoneNumber], [Active]) VALUES (7, N'Bizarro', NULL, NULL, NULL, NULL, NULL)
