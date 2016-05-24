@@ -61,7 +61,6 @@ CREATE TABLE [dbo].[IndividualPiece] (
   [Price] DECIMAL(18,2) NULL,
   [Sold] SMALLINT NULL,
   [Location] VARCHAR(40) NULL,
-  [EditionNumber] SMALLINT NULL,
   PRIMARY KEY CLUSTERED (IndividualPieceId ASC),
   CONSTRAINT [FK_IndividualPiece_Artwork] FOREIGN KEY ([ArtworkId]) REFERENCES [dbo].[Artwork]([ArtworkId])
 );
