@@ -16,6 +16,7 @@ namespace KATEArtGallery.ViewModels
         public int Sold { get; set; }
         public decimal AgentSales { get; set; }
         public decimal AgentProfits { get; set; }
+        public List<Agent> Agent { get; set; }
 
     }
 }

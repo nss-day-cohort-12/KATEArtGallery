@@ -12,5 +12,6 @@ namespace KATEArtGallery.ViewModels
         public string Name { get; set; }
         public string Medium { get; set;}
         public decimal Price { get; set; }
+        public List<ArtSearch> ArtSearch { get; set; }
     }
 }
