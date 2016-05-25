@@ -18,5 +18,6 @@ namespace KATEArtGallery.ViewModels
         public string WebURL { get; set; } 
         public string Category { get; set; } 
         public string Medium { get; set; }
+        public List<IndividualPiece> IndividualPiece { get; set; }
     }
 }

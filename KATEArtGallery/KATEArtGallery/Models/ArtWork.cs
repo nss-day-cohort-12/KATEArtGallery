@@ -10,7 +10,8 @@ namespace KATEArtGallery.Models
         public int ArtWorkId { get; set; }
         public int ArtistId { get; set; }
         public string Title { get; set; }
-        public string YearOriginallyCreated { get; set; }
+        public string Category { get; set; }
+        public string YearOriginalCreated { get; set; }
         public string Medium { get; set; }
         public string Dimensions { get; set; }
         public int NumberMade { get; set; }
