@@ -21,7 +21,7 @@ namespace KATEArtGallery.ViewModels
        public decimal WeeklySales { get; set; }
        public decimal MonthlySales { get; set; }
        public decimal AnnualSales { get; set; }
-       public List<OwnerInventory> OwnerInventory { get; set; } 
+       public List<ViewArtViewModel> OwnerInventory { get; set; } 
                
     }
 }
