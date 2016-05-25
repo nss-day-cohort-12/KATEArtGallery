@@ -173,11 +173,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Agent.cs" />
+    <Compile Include="Models\Artist.cs" />
+    <Compile Include="Models\ArtShow.cs" />
+    <Compile Include="Models\ArtWork.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\IndividualPiece.cs" />
+    <Compile Include="Models\Invoice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\AgentViewModel.cs" />
+    <Compile Include="ViewModels\ArtSearchViewModel.cs" />
+    <Compile Include="ViewModels\OwnerInventoryViewModel.cs" />
+    <Compile Include="ViewModels\ViewArtViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\KATEArtGalleryDB.mdf" />
@@ -239,7 +248,10 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\ArtWork\" />
+    <Folder Include="Views\Art\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

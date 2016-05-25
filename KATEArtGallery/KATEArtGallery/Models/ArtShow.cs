@@ -11,6 +11,6 @@ namespace KATEArtGallery.Models
         public int ArtWorkId { get; set; }
         public string ShowLocation { get; set; }
         public string Agents { get; set; }
-        public double Overhead { get;  set:}
+        public double Overhead { get; set; }
     }
 }
