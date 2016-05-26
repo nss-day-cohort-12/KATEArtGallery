@@ -32,7 +32,7 @@ namespace KATEArtGallery.Models
 
             modelBuilder.Entity<ArtWork>()
                 .ToTable("ArtWork")
-                .HasKey(c => c.ArtworkId);
+                .HasKey(c => c.ArtWorkId);
 
             modelBuilder.Entity<Customer>()
                 .ToTable("Customer")

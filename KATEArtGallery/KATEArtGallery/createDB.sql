@@ -15,8 +15,8 @@ CREATE TABLE [dbo].[Artist] (
     CONSTRAINT [PK_Artist] PRIMARY KEY CLUSTERED ([ArtistId] ASC)
 );
 
-CREATE TABLE [dbo].[Artwork] (
-    [ArtworkId]           INT     IDENTITY (1, 1) NOT NULL,
+CREATE TABLE [dbo].[ArtWork] (
+    [ArtWorkId]           INT     IDENTITY (1, 1) NOT NULL,
     [ArtistId]            INT     NOT NULL,
     [Title]               VARCHAR (100) NULL,
 	[Category]            VARCHAR (50) NULL,
@@ -26,8 +26,8 @@ CREATE TABLE [dbo].[Artwork] (
     [NumberMade]          VARCHAR (15) NULL,
     [NumberInInventory]   INT     NULL,
     [NumberSold]          INT     NULL,
-    CONSTRAINT [PK_Artwork] PRIMARY KEY CLUSTERED ([ArtworkId] ASC),
-	CONSTRAINT [FK_Artwork_Artist] FOREIGN KEY ([ArtistId]) REFERENCES [Artist]([ArtistId])
+    CONSTRAINT [PK_ArtWork] PRIMARY KEY CLUSTERED ([ArtWorkId] ASC),
+	CONSTRAINT [FK_ArtWork_Artist] FOREIGN KEY ([ArtistId]) REFERENCES [Artist]([ArtistId])
 );
 
 CREATE TABLE [dbo].[ArtShow] (
