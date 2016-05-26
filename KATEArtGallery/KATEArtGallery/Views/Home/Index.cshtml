@@ -5,7 +5,7 @@
 <div class="jumbotron">
     <h1>Welcome to the KATE Art Gallery!</h1>
     <p class="lead">Look at all the art!</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Click Here &raquo;</a></p>
+    <p>@Html.ActionLink("Click Here", "ViewArt", "ArtWork", null, new { @class = "btn btn-info" })</p>
 </div>
 
 <div class="row">
