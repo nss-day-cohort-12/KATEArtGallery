@@ -9,7 +9,7 @@ namespace KATEArtGallery.Models
     {
         public int ArtistId { get; set; }
         public string Name { get; set; }
-        public int BirthYear { get; set; }
-        public int DeathYear { get; set; }
+        //public DateTime BirthYear { get; set; }
+        //public DateTime DeathYear { get; set; }
     }
 }
