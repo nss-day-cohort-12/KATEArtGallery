@@ -55,12 +55,12 @@ CREATE TABLE [dbo].[Customer] (
 CREATE TABLE [dbo].[IndividualPiece] (
   [IndividualPieceId] SMALLINT   IDENTITY (1, 1) NOT NULL,
   [ArtWorkId] SMALLINT NOT NULL,
-  [Image] IMAGE NULL,
-  [DateCreated] DATE NULL,
+  [Image] VARCHAR(100) NULL,
+  [DateCreated] SMALLINT NULL,
   [Cost] DECIMAL(18,2) NULL,
   [Price] DECIMAL(18,2) NULL,
   [Sold] SMALLINT NULL,
-  [Location] VARCHAR(40) NULL,
+  [Location] VARCHAR(10) NULL,
   PRIMARY KEY CLUSTERED (IndividualPieceId ASC),
   CONSTRAINT [FK_IndividualPiece_Artwork] FOREIGN KEY ([ArtworkId]) REFERENCES [dbo].[Artwork]([ArtworkId])
 );
@@ -268,5 +268,5 @@ INSERT INTO [dbo].[IndividualPiece] ([IndividualPieceId], [ArtworkId], [Image], 
 INSERT INTO [dbo].[IndividualPiece] ([IndividualPieceId], [ArtworkId], [Image], [DateCreated], [Cost], [Price], [Sold], [Location]) VALUES (46, 46, N'http://www.ugallery.com/webdata/Product/44651/Images/Large_400.yellowfieldwithmesa.jpg', 2015, CAST(1779.75 AS Decimal(18, 2)), CAST(2825.00 AS Decimal(18, 2)), 1, N'North')
 INSERT INTO [dbo].[IndividualPiece] ([IndividualPieceId], [ArtworkId], [Image], [DateCreated], [Cost], [Price], [Sold], [Location]) VALUES (47, 47, N'http://www.ugallery.com/webdata/product/44357/view2/large_airmailwall.jpg', 2016, CAST(173.25 AS Decimal(18, 2)), CAST(275.00 AS Decimal(18, 2)), 0, N'North')
 INSERT INTO [dbo].[IndividualPiece] ([IndividualPieceId], [ArtworkId], [Image], [DateCreated], [Cost], [Price], [Sold], [Location]) VALUES (48, 48, N'http://static.ugallery.com/webdata/Product/39847/Images/Large_memory_ring_mini_full.jpg', 2015, CAST(378.00 AS Decimal(18, 2)), CAST(600.00 AS Decimal(18, 2)), 0, N'South')
-INSERT INTO [dbo].[IndividualPiece] ([IndividualPieceId], [ArtworkId], [Image], [DateCreated], [Cost], [Price], [Sold], [Location]) VALUES (49, 49, NULL, 2016, CAST(298.62 AS Decimal(18, 2)), CAST(474.00 AS Decimal(18, 2)), 0, N'South')
+INSERT INTO [dbo].[IndividualPiece] ([IndividualPieceId], [ArtworkId], [Image], [DateCreated], [Cost], [Price], [Sold], [Location]) VALUES (49, 49, http://www.ugallery.com/webdata/Product/43677/Images/Large_Main.jpg, 2016, CAST(298.62 AS Decimal(18, 2)), CAST(474.00 AS Decimal(18, 2)), 0, N'South')
 SET IDENTITY_INSERT [dbo].[IndividualPiece] OFF
