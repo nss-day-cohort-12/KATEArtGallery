@@ -169,6 +169,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ArtWorkController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -267,10 +268,10 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Scripts\jquery-2.2.3.min.map" />
+    <Content Include="Views\ArtWork\ViewArt.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\ArtWork\" />
-    <Folder Include="Views\Art\" />
+    <Folder Include="Views\IndividualPieces\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

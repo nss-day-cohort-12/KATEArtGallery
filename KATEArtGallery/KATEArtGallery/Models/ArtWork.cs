@@ -17,5 +17,6 @@ namespace KATEArtGallery.Models
         public int NumberMade { get; set; }
         public int NumberInInventory { get; set; }
         public int NumberSold { get; set; }
+        public List<ArtWork> Artwork { get; set; }
     }
 }

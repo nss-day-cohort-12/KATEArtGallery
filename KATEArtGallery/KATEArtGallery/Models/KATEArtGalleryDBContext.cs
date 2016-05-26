@@ -31,7 +31,7 @@ namespace KATEArtGallery.Models
                 .HasKey(c => c.ArtShowId);
 
             modelBuilder.Entity<ArtWork>()
-                .ToTable("Artwork")
+                .ToTable("ArtWork")
                 .HasKey(c => c.ArtWorkId);
 
             modelBuilder.Entity<Customer>()
