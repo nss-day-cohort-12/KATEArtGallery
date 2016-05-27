@@ -4,17 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using KATEArtGallery.Models;
+using KATEArtGallery.ViewModels;
 
 namespace KATEArtGallery.Controllers
 {
-    public class ArtworkController : Controller
+    public class ArtistController : Controller
     {
-        // GET: Artwork
-        public ActionResult ViewArtwork()
+        // GET: Artists
+        public ActionResult ViewArt()
         {
-            KATEArtGalleryDBContext _allArtContext = new KATEArtGalleryDBContext();
+            KATEArtGalleryDBContext _allArtistContext = new KATEArtGalleryDBContext();
 
-            List<ArtWork> artworkDetails = _allArtContext.Artwork.ToList();
+            List<Artist> artistDetails = _allArtistContext.Artist.ToList();
             //select new ArtWork
             //{
             //    Title = art.Title,
@@ -22,7 +23,7 @@ namespace KATEArtGallery.Controllers
             //    //DepartmentName = dept.DepartmentName
             //}).ToList();
 
-            return View(artworkDetails);
+            return View(artistDetails);
         }
     }
 }

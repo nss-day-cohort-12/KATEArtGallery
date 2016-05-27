@@ -101,7 +101,6 @@ CREATE TABLE [dbo].[Invoice] (
 );
 
 
-
 --Agent Table Data
 SET IDENTITY_INSERT [dbo].[Agent] ON
 INSERT INTO [dbo].[Agent] ([AgentId], [FirstName], [LastName], [Location], [Address], [PhoneNumber], [Active]) VALUES (1, N'Penguin', NULL, NULL, NULL, NULL, NULL)
