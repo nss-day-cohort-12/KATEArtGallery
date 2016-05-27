@@ -5,7 +5,11 @@
 
 <h2>ViewArtWork</h2>
 
-@foreach (var art in Model)
-{
-        @Html.DisplayFor(ModelItem => art.Title)
-}
+<table>
+    @foreach (var art in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(ModelItem => art.Title)</td>
+        </tr>
+    }
+</table>
