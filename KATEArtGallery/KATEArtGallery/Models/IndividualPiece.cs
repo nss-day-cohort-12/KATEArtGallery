@@ -15,6 +15,5 @@ namespace KATEArtGallery.Models
         public double Price { get; set; }
         public int Sold { get; set; }
         public string Location { get; set; }
-        public int EditionNumber { get; set; }
     }
 }

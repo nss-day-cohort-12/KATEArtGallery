@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [dbo].[Agent] (
-    [AgentId]   SMALLINT     IDENTITY (1, 1) NOT NULL,
+    [AgentId]   INT     IDENTITY (1, 1) NOT NULL,
     [FirstName] VARCHAR (25) NULL,
     [LastName]  VARCHAR (35) NULL,
     [Location]  VARCHAR (40) NULL,
@@ -10,31 +10,29 @@
 );
 
 CREATE TABLE [dbo].[Artist] (
-    [ArtistId]  SMALLINT     IDENTITY (1, 1) NOT NULL,
-    [Name]      VARCHAR (65) NULL,
-    [BirthYear] DATE     NULL,
-    [DeathYear] DATE     NULL,
+    [ArtistId]  INT           IDENTITY (1, 1) NOT NULL,
+    [Name]      VARCHAR (65)  NULL,
     CONSTRAINT [PK_Artist] PRIMARY KEY CLUSTERED ([ArtistId] ASC)
 );
 
-CREATE TABLE [dbo].[Artwork] (
-    [ArtworkId]           SMALLINT     IDENTITY (1, 1) NOT NULL,
-    [ArtistId]            SMALLINT     NOT NULL,
+CREATE TABLE [dbo].[ArtWork] (
+    [ArtWorkId]           INT     IDENTITY (1, 1) NOT NULL,
+    [ArtistId]            INT     NOT NULL,
     [Title]               VARCHAR (100) NULL,
 	[Category]            VARCHAR (50) NULL,
-    [YearOriginalCreated] SMALLINT     NULL,
+    [YearOriginalCreated] INT     NULL,
     [Medium]              VARCHAR (60) NULL,
     [Dimensions]          VARCHAR (30) NULL,
     [NumberMade]          VARCHAR (15) NULL,
-    [NumberInInventory]   SMALLINT     NULL,
-    [NumberSold]          SMALLINT     NULL,
-    CONSTRAINT [PK_Artwork] PRIMARY KEY CLUSTERED ([ArtworkId] ASC),
-	CONSTRAINT [FK_Artwork_Artist] FOREIGN KEY ([ArtistId]) REFERENCES [Artist]([ArtistId])
+    [NumberInInventory]   INT     NULL,
+    [NumberSold]          INT     NULL,
+    CONSTRAINT [PK_ArtWork] PRIMARY KEY CLUSTERED ([ArtWorkId] ASC),
+	CONSTRAINT [FK_ArtWork_Artist] FOREIGN KEY ([ArtistId]) REFERENCES [Artist]([ArtistId])
 );
 
 CREATE TABLE [dbo].[ArtShow] (
-    [ArtShowId]    SMALLINT     IDENTITY (1, 1) NOT NULL,
-    [ArtworkId]    SMALLINT     NOT NULL,
+    [ArtShowId]    INT     IDENTITY (1, 1) NOT NULL,
+    [ArtworkId]    INT     NOT NULL,
     [ShowLocation] VARCHAR (40) NULL,
     [Agents]       VARCHAR(30)  NULL,
     [Overhead]     BIT          NULL,
@@ -42,8 +40,8 @@ CREATE TABLE [dbo].[ArtShow] (
 );
 
 CREATE TABLE [dbo].[Customer] (
-    [CustomerId] SMALLINT     IDENTITY (1, 1) NOT NULL,
-    [AgentId]    SMALLINT     NOT NULL,
+    [CustomerId] INT     IDENTITY (1, 1) NOT NULL,
+    [AgentId]    INT     NOT NULL,
     [FirstName]  VARCHAR (50) NULL,
     [LastName]   VARCHAR (50) NULL,
     [PhoneNumber] VARCHAR (20)  NULL,
@@ -53,22 +51,22 @@ CREATE TABLE [dbo].[Customer] (
 );
 
 CREATE TABLE [dbo].[IndividualPiece] (
-  [IndividualPieceId] SMALLINT   IDENTITY (1, 1) NOT NULL,
-  [ArtWorkId] SMALLINT NOT NULL,
+  [IndividualPieceId] INT   IDENTITY (1, 1) NOT NULL,
+  [ArtWorkId] INT NOT NULL,
   [Image] VARCHAR(100) NULL,
-  [DateCreated] SMALLINT NULL,
+  [DateCreated] INT NULL,
   [Cost] DECIMAL(18,2) NULL,
   [Price] DECIMAL(18,2) NULL,
-  [Sold] SMALLINT NULL,
+  [Sold] INT NULL,
   [Location] VARCHAR(10) NULL,
   PRIMARY KEY CLUSTERED (IndividualPieceId ASC),
   CONSTRAINT [FK_IndividualPiece_Artwork] FOREIGN KEY ([ArtworkId]) REFERENCES [dbo].[Artwork]([ArtworkId])
 );
 
 CREATE TABLE [dbo].[Invoice] (
-    [InvoiceId]       SMALLINT        IDENTITY (1, 1) NOT NULL,
-    [CustomerId]      SMALLINT        NOT NULL,
-    [AgentId]         SMALLINT        NOT NULL,
+    [InvoiceId]       INT        IDENTITY (1, 1) NOT NULL,
+    [CustomerId]      INT        NOT NULL,
+    [AgentId]         INT        NOT NULL,
     [PaymentMethod]   VARCHAR (25)    NULL,
     [ShippingAddress] VARCHAR (100)   NULL,
     [PieceSold]       VARCHAR (75)    NULL,
@@ -268,5 +266,5 @@ INSERT INTO [dbo].[IndividualPiece] ([IndividualPieceId], [ArtworkId], [Image], 
 INSERT INTO [dbo].[IndividualPiece] ([IndividualPieceId], [ArtworkId], [Image], [DateCreated], [Cost], [Price], [Sold], [Location]) VALUES (46, 46, N'http://www.ugallery.com/webdata/Product/44651/Images/Large_400.yellowfieldwithmesa.jpg', 2015, CAST(1779.75 AS Decimal(18, 2)), CAST(2825.00 AS Decimal(18, 2)), 1, N'North')
 INSERT INTO [dbo].[IndividualPiece] ([IndividualPieceId], [ArtworkId], [Image], [DateCreated], [Cost], [Price], [Sold], [Location]) VALUES (47, 47, N'http://www.ugallery.com/webdata/product/44357/view2/large_airmailwall.jpg', 2016, CAST(173.25 AS Decimal(18, 2)), CAST(275.00 AS Decimal(18, 2)), 0, N'North')
 INSERT INTO [dbo].[IndividualPiece] ([IndividualPieceId], [ArtworkId], [Image], [DateCreated], [Cost], [Price], [Sold], [Location]) VALUES (48, 48, N'http://static.ugallery.com/webdata/Product/39847/Images/Large_memory_ring_mini_full.jpg', 2015, CAST(378.00 AS Decimal(18, 2)), CAST(600.00 AS Decimal(18, 2)), 0, N'South')
-INSERT INTO [dbo].[IndividualPiece] ([IndividualPieceId], [ArtworkId], [Image], [DateCreated], [Cost], [Price], [Sold], [Location]) VALUES (49, 49, http://www.ugallery.com/webdata/Product/43677/Images/Large_Main.jpg, 2016, CAST(298.62 AS Decimal(18, 2)), CAST(474.00 AS Decimal(18, 2)), 0, N'South')
+INSERT INTO [dbo].[IndividualPiece] ([IndividualPieceId], [ArtworkId], [Image], [DateCreated], [Cost], [Price], [Sold], [Location]) VALUES (49, 49, N'http://www.ugallery.com/webdata/Product/43677/Images/Large_Main.jpg', 2016, CAST(298.62 AS Decimal(18, 2)), CAST(474.00 AS Decimal(18, 2)), 0, N'South')
 SET IDENTITY_INSERT [dbo].[IndividualPiece] OFF

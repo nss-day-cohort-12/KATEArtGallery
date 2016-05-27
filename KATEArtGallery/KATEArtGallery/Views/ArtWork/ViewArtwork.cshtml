@@ -1,0 +1,11 @@
+﻿@model List<KATEArtGallery.Models.ArtWork>
+@{
+    ViewBag.Title = "ViewArtWork";
+}
+
+<h2>ViewArtWork</h2>
+
+@foreach (var art in Model)
+{
+        @Html.DisplayFor(ModelItem => art.Title)
+}
