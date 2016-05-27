@@ -9,5 +9,7 @@ namespace KATEArtGallery.Models
     {
         public int ArtistId { get; set; }
         public string Name { get; set; }
+
+        public List<ArtWork> Artwork { get; set; }
     }
 }
