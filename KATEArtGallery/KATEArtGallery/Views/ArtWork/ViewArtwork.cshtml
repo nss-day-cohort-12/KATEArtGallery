@@ -3,8 +3,10 @@
     ViewBag.Title = "ViewArtWork";
 }
 
-<h2>ViewArtWork</h2>
-
+<h2>ArtWork</h2>
+@Html.ActionLink("Add artwork", "Create")
+@using (Html.BeginForm("ViewArtwork", "Artwork"))
+{
 <table>
     <thead>
         <tr>
@@ -34,3 +36,4 @@
         }
     </tbody>
 </table>
+}
