@@ -32,6 +32,7 @@
                 <td>@Html.DisplayFor(ModelItem => art.NumberMade)</td>
                 <td>@Html.DisplayFor(ModelItem => art.NumberInInventory)</td>
                 <td>@Html.DisplayFor(ModelItem => art.NumberSold)</td>
+                <td>@Html.ActionLink("Delete", "Delete", "ViewArtwork", new { artworkId = art.ArtWorkId })</td>
             </tr>
         }
     </tbody>
