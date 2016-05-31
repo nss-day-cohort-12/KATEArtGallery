@@ -53,7 +53,7 @@ namespace KATEArtGallery.Controllers
                 return View(artworkDetails);
             }
         }
-
+        [HttpGet]
         public ActionResult Delete(int artworkId)
         {
             if (artworkId != 0)
@@ -71,7 +71,7 @@ namespace KATEArtGallery.Controllers
             {
                 ViewBag.Title = "There was a problem";
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("ViewArtwork");
         }
 
         //public ActionResult Delete(int? ArtWorkId, bool? saveChangesError = false)
