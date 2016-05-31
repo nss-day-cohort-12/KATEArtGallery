@@ -3,9 +3,38 @@
     ViewBag.Title = "ViewArtWork";
 }
 
-<h2>ViewArtWork</h2>
-
-@foreach (var art in Model)
+<h2>ArtWork</h2>
+@Html.ActionLink("Add artwork", "Create")
+@using (Html.BeginForm("ViewArtwork", "Artwork"))
 {
-        @Html.DisplayFor(ModelItem => art.Title)
+<table>
+    <thead>
+        <tr>
+            <td><b>ArtWork Title</b></td>
+            <td><b>Category</b></td>
+            <td><b>Year</b></td>
+            <td><b>Medium</b></td>
+            <td><b>Dimensions</b></td>
+            <td><b>Number Made</b></td>
+            <td><b>Number in Inventory</b></td>
+            <td><b>Number Sold</b></td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var art in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(ModelItem => art.Title)</td>
+                <td>@Html.DisplayFor(ModelItem => art.Category)</td>
+                <td>@Html.DisplayFor(ModelItem => art.YearOriginalCreated)</td>
+                <td>@Html.DisplayFor(ModelItem => art.Medium)</td>
+                <td>@Html.DisplayFor(ModelItem => art.Dimensions)</td>
+                <td>@Html.DisplayFor(ModelItem => art.NumberMade)</td>
+                <td>@Html.DisplayFor(ModelItem => art.NumberInInventory)</td>
+                <td>@Html.DisplayFor(ModelItem => art.NumberSold)</td>
+                <td>@Html.ActionLink("Delete", "Delete", new { artworkId = art.ArtWorkId })</td>
+            </tr>
+        }
+    </tbody>
+</table>
 }

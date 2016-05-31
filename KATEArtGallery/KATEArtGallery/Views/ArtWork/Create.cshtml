@@ -1,0 +1,34 @@
+﻿@model KATEArtGallery.Models.ArtWork
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.Label("Title")
+    @Html.EditorFor(model => model.Title)
+
+    @Html.Label("Category")
+    @Html.EditorFor(model => model.Category)
+
+    @Html.Label("Year")
+    @Html.EditorFor(model => model.YearOriginalCreated)
+
+    @Html.Label("Medium")
+    @Html.EditorFor(model => model.Medium)
+
+    @Html.Label("Dimensions")
+    @Html.EditorFor(model => model.Dimensions)
+
+    @Html.Label("Number Made")
+    @Html.EditorFor(model => model.NumberMade)
+
+    @Html.Label("Number in Inventory")
+    @Html.EditorFor(model => model.NumberInInventory)
+
+    @Html.Label("Number Sold")
+    @Html.EditorFor(model => model.NumberSold)
+
+    <input type="submit" value="Create" />
+}
+
+@Html.ActionLink("Back to artwork listings", "ViewArtwork", "Artwork")
